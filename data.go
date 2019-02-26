@@ -90,10 +90,7 @@ func ReadData(path string) *Data {
 		}
 		for j, err := range errs {
 			if err != nil {
-				if j == 8 {
-					continue
-				}
-				fmt.Printf("err at (%d, %d)\n", i, j)
+				fmt.Printf("err at (%s, %d, %d)\n", path, i, j)
 				fmt.Printf("parsed value = %f\n", ar[j])
 			}
 		}
